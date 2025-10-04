@@ -18,6 +18,11 @@ usage() {
   exit 1
 }
 
+# Show usage if no arguments are provided
+if [ $# -eq 0 ]; then
+  usage
+fi
+
 # Parse args
 while getopts ":o:acr:" opt; do
   case $opt in
